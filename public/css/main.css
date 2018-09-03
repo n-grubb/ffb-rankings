@@ -1,21 +1,67 @@
 .player-headshot {
-    border-radius: 40px;
-    height: 25px;
-    margin-right: 8px;
-    margin-bottom: -7px
+    border-radius: 0px;
+    height: 40px;
 }
+
 td.seperator {
     background-color: #f7f7f7;
 }
+
 .positive {
     color: green;
 }
+
 .negative {
     color: red;
 }
+
 td {
     position: relative;
 }
+
+.table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+td.player-img {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+td.name {
+    text-align: left;
+}
+
+.team-logo {
+    float: left;
+    width: 20px;
+    margin-left: 5px;
+}
+
+td.team {
+    padding-right: .5em;
+}
+
+td.team span {
+    float: left;
+    margin-top: 2px;
+    margin-left: 3px;
+    font-size: 12px;
+}
+
+span.diff {
+    font-size: 12px;
+}
+
+.above {
+    color: green;
+}
+
+.below {
+    color: red; 
+}
+
 tr.strikethru td:before {
     content: " ";
     position: absolute;
@@ -23,4 +69,83 @@ tr.strikethru td:before {
     left: 0;
     border-bottom: 1px solid #111;
     width: 100%;
+    z-index: 4;
+}
+
+tr.faded {
+    opacity: .25;
+}
+
+tr.drafted {
+    outline: 1px solid #20bc56;
+    background-color: #f2f2f2 !important;
+}
+
+tr.drafted button {
+    opacity: .25;
+}
+
+.flyout-container {
+    position: fixed;
+    top: 0;
+    right: -312px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    transition: right .5s;
+}
+
+.flyout-container.open {
+    right: 0;
+}
+
+.flyout-container .title {
+    /* text-align: center; */
+    margin: 10px;
+}
+
+.flyout-container .name {
+    min-width: 120px;
+}
+
+.flyout-container .team {
+    min-width: 75px;
+}
+
+.handle {
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 100%; 
+    background-color: #f2f2f2
+}
+
+.roster {
+    padding-left: 15px;
+}
+
+.roster .player-headshot {
+    height: 25px;
+}
+
+td.pos {
+    text-transform: uppercase;
+}
+
+td.actions button {
+    margin-right: 3px;
+}
+
+.logout-btn {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.notification {
+    padding: 1em;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+.notification button {
+    font-weight: bold;
 }
